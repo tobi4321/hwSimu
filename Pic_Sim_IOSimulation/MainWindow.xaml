@@ -1,0 +1,80 @@
+﻿<Window x:Class="Pic_Sim_IOSimulation.HwSimGui"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pic_Sim_IOSimulation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="624.515" Width="728.947" ResizeMode="NoResize">
+    <Grid>
+        <Image Margin="0,0,229,10" Source="pic16f84.PNG" Stretch="Fill" HorizontalAlignment="Right" Width="261" Height="468" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txtBox_IP" HorizontalAlignment="Left" Height="23" Margin="84,10,0,0" TextWrapping="Wrap" Text="192.168.178.43" VerticalAlignment="Top" Width="104" FontSize="14"/>
+        <TextBox x:Name="txtBox_Port" HorizontalAlignment="Left" Height="23" Margin="270,10,0,0" TextWrapping="Wrap" Text="25565" VerticalAlignment="Top" Width="53" FontSize="14"/>
+        <Label Content="Server-IP" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Server-Port" HorizontalAlignment="Left" Margin="188,7,0,0" VerticalAlignment="Top"/>
+        <Button Content="Connect to Simulator" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="414,9,0,0" Height="23" Click="btn_SimuConnect"/>
+        
+        <Label Content="RA2" HorizontalAlignment="Left" Margin="193,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="RA3" HorizontalAlignment="Left" Margin="193,180,0,0" VerticalAlignment="Top"/>
+        <Label Content="RA4/T0CKI" HorizontalAlignment="Left" Margin="157,230,0,0" VerticalAlignment="Top"/>
+        <Label Content="MCLR" HorizontalAlignment="Left" Margin="183,278,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vss" HorizontalAlignment="Left" Margin="192,326,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB0/Int" HorizontalAlignment="Left" Margin="175,378,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB1" HorizontalAlignment="Left" Margin="192,426,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB2" HorizontalAlignment="Left" Margin="192,475,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB3" HorizontalAlignment="Left" Margin="192,524,0,0" VerticalAlignment="Top"/>
+        <Label Content="RA1" HorizontalAlignment="Left" Margin="499,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="RA0" HorizontalAlignment="Left" Margin="499,180,0,0" VerticalAlignment="Top"/>
+        <Label Content="OSC1/CLKIN" HorizontalAlignment="Left" Margin="499,230,0,0" VerticalAlignment="Top"/>
+        <Label Content="OSC2/CLKOUT" HorizontalAlignment="Left" Margin="499,278,0,0" VerticalAlignment="Top"/>
+        <Label Content="VDD" HorizontalAlignment="Left" Margin="499,327,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB7" HorizontalAlignment="Left" Margin="499,378,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB6" HorizontalAlignment="Left" Margin="499,427,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB5" HorizontalAlignment="Left" Margin="499,476,0,0" VerticalAlignment="Top"/>
+        <Label Content="RB4" HorizontalAlignment="Left" Margin="499,526,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_RA2" Content="Toggle RA2" HorizontalAlignment="Left" Margin="49,139,0,0" VerticalAlignment="Top" Width="95" Click="btn_ChangeRA2" Height="26"/>
+        <Canvas x:Name="cvRA2" HorizontalAlignment="Left" Height="29" Margin="226,129,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRA3" HorizontalAlignment="Left" Height="29" Margin="226,178,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRA4" HorizontalAlignment="Left" Height="28" Margin="226,228,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvMCLR" HorizontalAlignment="Left" Height="29" Margin="226,276,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRA1" HorizontalAlignment="Left" Height="29" Margin="463,129,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRA0" HorizontalAlignment="Left" Height="29" Margin="463,178,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvOSC1" HorizontalAlignment="Left" Height="28" Margin="463,228,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvOSC2" HorizontalAlignment="Left" Height="29" Margin="463,276,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvVDD" HorizontalAlignment="Left" Height="29" Margin="463,326,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB7" HorizontalAlignment="Left" Height="29" Margin="463,376,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB6" HorizontalAlignment="Left" Height="29" Margin="463,425,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB5" HorizontalAlignment="Left" Height="28" Margin="463,475,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB4" HorizontalAlignment="Left" Height="29" Margin="463,523,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvVSS" HorizontalAlignment="Left" Height="29" Margin="226,326,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB0" HorizontalAlignment="Left" Height="30" Margin="226,375,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB1" HorizontalAlignment="Left" Height="30" Margin="226,425,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB2" HorizontalAlignment="Left" Height="28" Margin="226,475,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Canvas x:Name="cvRB3" HorizontalAlignment="Left" Height="29" Margin="226,524,0,0" VerticalAlignment="Top" Width="17" Background="Red"/>
+        <Button x:Name="btn_RA3" Content="Toggle RA3" HorizontalAlignment="Left" Margin="49,188,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeRA3"/>
+        <Button x:Name="btn_RA4" Content="Toggle RA4" HorizontalAlignment="Left" Margin="49,238,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeRA4"/>
+        <Button x:Name="btn_MCLR" Content="Toggle MCLR" HorizontalAlignment="Left" Margin="49,286,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeMCLR"/>
+        <Button x:Name="btn_VSS" Content="Toggle Vss" HorizontalAlignment="Left" Margin="49,335,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeVss"/>
+        <Button x:Name="btn_RB0" Content="Toggle RB0" HorizontalAlignment="Left" Margin="49,386,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeRB0"/>
+        <Button x:Name="btn_RB1" Content="Toggle RB1" HorizontalAlignment="Left" Margin="49,434,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeRB1"/>
+        <Button x:Name="btn_RB2" Content="Toggle RB2" HorizontalAlignment="Left" Margin="49,484,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="btn_ChangeRB2"/>
+        <Button x:Name="btn_RB3" Content="Toggle RB3" HorizontalAlignment="Left" Margin="49,532,0,0" VerticalAlignment="Top" Width="95" Height="27" Click="btn_ChangeRB3"/>
+        <Button x:Name="btn_RA0" Content="Toggle RA0" HorizontalAlignment="Left" Margin="587,189,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeRA0"/>
+        <Button x:Name="btn_OSC1" Content="Toggle OSC1" HorizontalAlignment="Left" Margin="587,239,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeOSC1"/>
+        <Button x:Name="btn_OSC2" Content="Toggle OSC2" HorizontalAlignment="Left" Margin="587,287,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeOSC2"/>
+        <Button x:Name="btn_VDD" Content="Toggle VDD" HorizontalAlignment="Left" Margin="587,336,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeVDD"/>
+        <Button x:Name="btn_RB7" Content="Toggle RB7" HorizontalAlignment="Left" Margin="587,387,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeRB7"/>
+        <Button x:Name="btn_RB6" Content="Toggle RB6" HorizontalAlignment="Left" Margin="587,435,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeRB6"/>
+        <Button x:Name="btn_RB5" Content="Toggle RB5" HorizontalAlignment="Left" Margin="587,485,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeRB5"/>
+        <Button x:Name="btn_RB4" Content="Toggle RB4" HorizontalAlignment="Left" Margin="587,533,0,0" VerticalAlignment="Top" Width="96" Height="27" Click="btn_ChangeRB4"/>
+        <Button x:Name="btn_RA1" Content="Toggle RA1" HorizontalAlignment="Left" Margin="587,139,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="btn_ChangeRA1"/>
+
+        <Label Content="Select Serial Port" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_ports" HorizontalAlignment="Left" Margin="324,58,0,0" VerticalAlignment="Top" Width="139" Height="23" SelectedIndex="0"/>
+        <Button x:Name="btn_refresh" Content="refresh" HorizontalAlignment="Left" Margin="480,58,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Btn_refresh_Click"/>
+        <Button x:Name="btn_ConnectPort" Content="Connect to Arduino" HorizontalAlignment="Left" Margin="570,58,0,0" VerticalAlignment="Top" Width="140" Height="23" Click="Btn_ConnectPort_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="721" Margin="0,49,0,0"/>
+        <Button x:Name="btn_SimuDisconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="570,9,0,0" VerticalAlignment="Top" Width="140" Click="Btn_SimuDisconnect_Click"/>
+
+    </Grid>
+</Window>
